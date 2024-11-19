@@ -1,0 +1,125 @@
+body{
+    background-color: black;
+    color: black;
+}
+
+#container{
+
+    height: 550px;
+    width: 450px;
+    border: 5px solid none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+    
+}
+
+#header{
+    padding-left: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #00ffc4 ;
+   
+    
+}
+
+form{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+#todo-input{
+    box-sizing: border-box;
+    padding: 12px 12px;
+    width: 100%;
+    background: none;
+    border: 2px solid #00ffc4;
+    border-radius: 1000px;
+    font: inherit;
+    color: white;
+    caret-color: #00ffc4;
+
+}
+
+#button1{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: burlywood;
+    height: 100%;
+    padding: 0 30px;
+    border: none;
+    border-radius: 1000px;
+    font: inherit;
+    font-weight: 550;
+    color: black;
+    cursor: pointer;
+}
+
+#delete-button{
+    padding: 3px;
+    background-color: #1c1d20;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.todo{
+    margin-bottom: 10px;
+    padding: 0 30px;
+    margin-right: 30px;
+    background-color: #1c1d20;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.todo .todo-text{
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 1;
+    transition: 200ms ease;
+}
+
+#delete-button svg{
+    transition: 200ms ease-in;
+}
+
+#delete-button:hover svg{
+    fill: #ff0033;
+}
+
+.custom-checkbox{
+    border: 2px solid #00ffc4;
+    border-radius: 50%;
+    min-height: 20px;
+    min-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 200ms ease;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox{
+    background-color: #00ffc4;
+}
+input[type="checkbox"]:checked ~ .custom-checkbox svg{
+    fill: #1c1d20
+}
+input[type="checkbox"]:checked ~ .todo-text{
+    text-decoration: line-through;
+    color: #00ffc4;
+}
+input[type="checkbox"]{
+    display: none;
+}
